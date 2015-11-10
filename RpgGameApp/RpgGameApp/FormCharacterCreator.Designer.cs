@@ -34,6 +34,7 @@
             this.Rdo_GenderMale = new System.Windows.Forms.RadioButton();
             this.Rdo_GenderFemale = new System.Windows.Forms.RadioButton();
             this.Cbo_CharacterClass = new System.Windows.Forms.ComboBox();
+            this.Btn_SaveCharacter = new System.Windows.Forms.Button();
             this.Gbox_Gender.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,16 +96,27 @@
             "Cleric",
             "Paladin",
             "Lumberjack"});
-            this.Cbo_CharacterClass.Location = new System.Drawing.Point(16, 142);
+            this.Cbo_CharacterClass.Location = new System.Drawing.Point(16, 129);
             this.Cbo_CharacterClass.Name = "Cbo_CharacterClass";
             this.Cbo_CharacterClass.Size = new System.Drawing.Size(121, 21);
             this.Cbo_CharacterClass.TabIndex = 3;
+            // 
+            // Btn_SaveCharacter
+            // 
+            this.Btn_SaveCharacter.Location = new System.Drawing.Point(13, 186);
+            this.Btn_SaveCharacter.Name = "Btn_SaveCharacter";
+            this.Btn_SaveCharacter.Size = new System.Drawing.Size(124, 44);
+            this.Btn_SaveCharacter.TabIndex = 4;
+            this.Btn_SaveCharacter.Text = "Save Character";
+            this.Btn_SaveCharacter.UseVisualStyleBackColor = true;
+            this.Btn_SaveCharacter.Click += new System.EventHandler(this.Btn_SaveCharacter_Click);
             // 
             // FormCharacterCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.Btn_SaveCharacter);
             this.Controls.Add(this.Cbo_CharacterClass);
             this.Controls.Add(this.Gbox_Gender);
             this.Controls.Add(this.Txt_CharacterName);
@@ -126,5 +138,6 @@
         private System.Windows.Forms.RadioButton Rdo_GenderFemale;
         private System.Windows.Forms.RadioButton Rdo_GenderMale;
         private System.Windows.Forms.ComboBox Cbo_CharacterClass;
+        private System.Windows.Forms.Button Btn_SaveCharacter;
     }
 }
