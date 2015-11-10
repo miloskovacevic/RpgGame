@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace RpgGameApp
 {
-    public partial class Frm_Menu : Form
+    public partial class FormCharacterCreator : Form
     {
-        public Frm_Menu()
+        public FormCharacterCreator()
         {
             InitializeComponent();
-        }
-
-        private void Btn_CreateCharacter_Click(object sender, EventArgs e)
-        {
-            FormCharacterCreator charCreator = new FormCharacterCreator();
-            charCreator.Show();
         }
     }
 }
