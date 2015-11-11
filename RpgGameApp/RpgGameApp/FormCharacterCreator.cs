@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RpgGameApp.CharacterClasses;
 
 namespace RpgGameApp
 {
@@ -19,17 +20,34 @@ namespace RpgGameApp
 
         private void Btn_SaveCharacter_Click(object sender, EventArgs e)
         {
-            string output = string.Empty;
-            output += "Name: " + Txt_CharacterName.Text;
-            output += "\nGender: " +
-                (string)(this.Rdo_GenderMale.Checked ? "Male" : "Female");
-            output += "\nClass: " + Cbo_CharacterClass.Text;
+            //make sure nothing is empty
+            if (string.IsNullOrEmpty(Txt_CharacterName.Text) || Txt_CharacterName.Text[0] == ' ')
+            {
+                MessageBox.Show("You must name your character! Names cannot begin with spaces...");
+                return;
+            }
+
+            if (this.Rdo_GenderMale.Checked == false && this.Rdo_GenderFemale.Checked == false)
+            {
+                MessageBox.Show("You need to select gender mothafuckaaa!");
+                return;
+            }
+
+            string gender = (string)(this.Rdo_GenderMale.Checked ? "Male" : "Female");
+
+            //provjera koju klasu smo zabrali...
+            if(string.IsNullOrEmpty(Cbo_CharacterClass.Text))
+            {
+                MessageBox.Show("Please select class of player eg. Lumberjacck, Mage...");
+                return;
+            }
+            MessageBox.Show(Cbo_CharacterClass.Text);
 
             Txt_CharacterName.Text = string.Empty;
             Rdo_GenderMale.Checked = false;
             Rdo_GenderFemale.Checked = false;
             Cbo_CharacterClass.Text = string.Empty;
-            MessageBox.Show(output);
+            
         }
     }
 }

@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CharacterClasses\Entity.cs" />
+    <Compile Include="CharacterClasses\Lumberjack.cs" />
+    <Compile Include="CharacterClasses\Mage.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
