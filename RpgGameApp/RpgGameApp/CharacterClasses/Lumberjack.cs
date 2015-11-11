@@ -14,6 +14,7 @@ namespace RpgGameApp.CharacterClasses
         }
         public Lumberjack(string name, EntityGender gender) : base()
         {
+            rand = new Random();
             Name = name;
             Gender = gender;
             _strength = rand.Next(3, 8);

@@ -8,13 +8,16 @@ namespace RpgGameApp.CharacterClasses
 {
     public class Mage : Entity
     {
+        
         public Mage() : base()
         { 
    
         }
 
+        
         public Mage(string name, EntityGender gender) : base()
         {
+            rand = new Random();
             Name = name;
             Gender = gender;
             _wisdom = rand.Next(3, 8);

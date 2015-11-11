@@ -41,7 +41,21 @@ namespace RpgGameApp
                 MessageBox.Show("Please select class of player eg. Lumberjacck, Mage...");
                 return;
             }
-            MessageBox.Show(Cbo_CharacterClass.Text);
+
+            string name = Txt_CharacterName.Text;
+            EntityGender eGender ;
+
+            if(this.Rdo_GenderMale.Checked)
+            {
+                eGender = EntityGender.Male;
+            }
+            else
+            {
+                eGender = EntityGender.Female;
+            }
+
+            Mage player1 = new Mage(name, eGender);
+            MessageBox.Show(String.Format("Player 1 created : {0}, a {1}, Named: {2}", player1.GetType().Name, player1.Gender.ToString(), player1.Name));
 
             Txt_CharacterName.Text = string.Empty;
             Rdo_GenderMale.Checked = false;
