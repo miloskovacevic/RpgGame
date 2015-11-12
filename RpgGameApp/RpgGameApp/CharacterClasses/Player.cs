@@ -21,14 +21,14 @@ namespace RpgGameApp.CharacterClasses
             : base()
         {
             Name = name;
-            Gender = Gender;
+            Gender = eGender;
             CharacterClass = eClass;
         }
 
         public Player(string name, EntityGender eGender, EntityClass eClass, int dexterity, int health, int strength, int wisdom)
         {
             Name = name;
-            Gender = Gender;
+            Gender = eGender;
             CharacterClass = eClass;
             Dexterity = dexterity;
             Health = health;
