@@ -33,13 +33,13 @@ namespace RpgGameApp.CharacterClasses
         #endregion
 
         #region Properties region
-        public string Name { get { return _name; } protected set { _name = value; } }
-        public EntityGender Gender { get { return _gender; } protected set { _gender = value; } }
-        public EntityClass CharacterClass { get { return _characterClass; } protected set { _characterClass = value; } }
-        public int Strength { get { return _strength + _strengthModifier; } protected set { _strength = value; } }
-        public int Dexterity { get { return _dexterity + _dexterityModifier; } protected set { _dexterity = value; } }
-        public int Wisdom { get { return _wisdom + _wisdomModifier; } protected set { _wisdom = value; } }
-        public int Health { get { return _health + _healthModifier; } protected set { _health = value; } }
+        public string Name { get { return _name; }  set { _name = value; } }
+        public EntityGender Gender { get { return _gender; }  set { _gender = value; } }
+        public EntityClass CharacterClass { get { return _characterClass; }  set { _characterClass = value; } }
+        public int Strength { get { return _strength + _strengthModifier; }  set { _strength = value; } }
+        public int Dexterity { get { return _dexterity + _dexterityModifier; }  set { _dexterity = value; } }
+        public int Wisdom { get { return _wisdom + _wisdomModifier; }  set { _wisdom = value; } }
+        public int Health { get { return _health + _healthModifier; }  set { _health = value; } }
         #endregion
 
         #region Constructors region

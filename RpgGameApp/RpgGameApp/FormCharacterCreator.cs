@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RpgGameApp.CharacterClasses;
+using System.IO;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace RpgGameApp
 {
@@ -76,21 +79,58 @@ namespace RpgGameApp
 
             //kreiramo igraca
             Player player1 = new Player(name, eGender, eClass);
-            string output;
-            output = String.Format("You created a new character.\n" + 
-                "Your name is: {0}. \nYour gender is: {1}.\n" +
-             "Your class is: {2}", player1.Name, player1.Gender.ToString(), player1.CharacterClass.ToString());
-            MessageBox.Show(output, "Success!");
 
+            //string output;
+            //output = String.Format("You created a new character.\n" + 
+            //    "Your name is: {0}. \nYour gender is: {1}.\n" +
+            // "Your class is: {2}", player1.Name, player1.Gender.ToString(), player1.CharacterClass.ToString());
+            //MessageBox.Show(output, "Success!");
 
-            //Mage player2 = new Mage(name, eGender);
-            //MessageBox.Show(String.Format("Player 1 created : {0}, a {1}, Named: {2}", player1.GetType().Name, player1.Gender.ToString(), player1.Name));
-
-            Txt_CharacterName.Text = string.Empty;
-            Rdo_GenderMale.Checked = false;
-            Rdo_GenderFemale.Checked = false;
-            Cbo_CharacterClass.Text = string.Empty;
+            //store our player...
+            StoreCharacter(player1);
             
+            
+            this.Close();
         }
+
+        private void StoreCharacter(Player player)
+        {
+            using (Stream stream = File.Create(PlayerSettingsFile))
+            {
+
+                XmlSerializer ser = new XmlSerializer(player.GetType());
+                ser.Serialize(stream, player);
+            }
+        }
+
+
+        // vrati settings folder
+        private static String SettingsFolder
+        {
+            get
+            { 
+                // create a string folder
+                string folder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+                //add a subfolder
+                folder = Path.Combine(folder, "RPG Project");
+                folder = Path.Combine(folder, "CharacterSettings");
+                if(!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+                }
+
+                return folder;
+            }
+        }
+
+        //vrati settings fajl...
+        private static String PlayerSettingsFile
+        {
+            get 
+            {
+                return Path.Combine(SettingsFolder, "Player.xml");
+            }
+        }
+
     }
 }
