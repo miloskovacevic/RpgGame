@@ -33,7 +33,7 @@ namespace RpgGameApp
                 return;
             }
 
-            string gender = (string)(this.Rdo_GenderMale.Checked ? "Male" : "Female");
+            //string gender = (string)(this.Rdo_GenderMale.Checked ? "Male" : "Female");
 
             //provjera koju klasu smo zabrali...
             if(string.IsNullOrEmpty(Cbo_CharacterClass.Text))
