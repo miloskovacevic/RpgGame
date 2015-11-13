@@ -88,8 +88,9 @@ namespace RpgGameApp
 
             //store our player...
             StoreCharacter(player1);
-            
-            
+
+            CharacterID stats = new CharacterID();
+            stats.Show();
             this.Close();
         }
 
@@ -97,12 +98,10 @@ namespace RpgGameApp
         {
             using (Stream stream = File.Create(PlayerSettingsFile))
             {
-
                 XmlSerializer ser = new XmlSerializer(player.GetType());
                 ser.Serialize(stream, player);
             }
         }
-
 
         // vrati settings folder
         private static String SettingsFolder
@@ -132,5 +131,22 @@ namespace RpgGameApp
             }
         }
 
+        private static Player DefaultSettings
+        {
+            get 
+            {
+                return new Player
+                {
+                    Name = "",
+                    Gender = EntityGender.Unknown,
+                    CharacterClass = EntityClass.Unknown,
+                    Dexterity = 0,
+                    Health = 0,
+                    Strength = 0
+                };
+            }
+        }
+
+        
     }
 }

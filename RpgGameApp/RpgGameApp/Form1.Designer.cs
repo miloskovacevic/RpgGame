@@ -32,10 +32,8 @@
             this.Lbl_GameTitle = new System.Windows.Forms.Label();
             this.Btn_CreateCharacter = new System.Windows.Forms.Button();
             this.Btn_LoadGame = new System.Windows.Forms.Button();
-            this.Btn_Options = new System.Windows.Forms.Button();
             this.Btn_HighScores = new System.Windows.Forms.Button();
             this.Btn_Credits = new System.Windows.Forms.Button();
-            this.Btn_GetStats = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Lbl_GameTitle
@@ -55,7 +53,7 @@
             this.Btn_CreateCharacter.Name = "Btn_CreateCharacter";
             this.Btn_CreateCharacter.Size = new System.Drawing.Size(103, 44);
             this.Btn_CreateCharacter.TabIndex = 1;
-            this.Btn_CreateCharacter.Text = "Create Character";
+            this.Btn_CreateCharacter.Text = "New Game";
             this.Btn_CreateCharacter.UseVisualStyleBackColor = true;
             this.Btn_CreateCharacter.Click += new System.EventHandler(this.Btn_CreateCharacter_Click);
             // 
@@ -68,16 +66,6 @@
             this.Btn_LoadGame.TabIndex = 2;
             this.Btn_LoadGame.Text = "Load Game";
             this.Btn_LoadGame.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Options
-            // 
-            this.Btn_Options.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Btn_Options.Location = new System.Drawing.Point(17, 254);
-            this.Btn_Options.Name = "Btn_Options";
-            this.Btn_Options.Size = new System.Drawing.Size(103, 44);
-            this.Btn_Options.TabIndex = 3;
-            this.Btn_Options.Text = "Options";
-            this.Btn_Options.UseVisualStyleBackColor = true;
             // 
             // Btn_HighScores
             // 
@@ -99,16 +87,6 @@
             this.Btn_Credits.Text = "Credits";
             this.Btn_Credits.UseVisualStyleBackColor = true;
             // 
-            // Btn_GetStats
-            // 
-            this.Btn_GetStats.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Btn_GetStats.Location = new System.Drawing.Point(294, 194);
-            this.Btn_GetStats.Name = "Btn_GetStats";
-            this.Btn_GetStats.Size = new System.Drawing.Size(103, 44);
-            this.Btn_GetStats.TabIndex = 6;
-            this.Btn_GetStats.Text = "Get Stats";
-            this.Btn_GetStats.UseVisualStyleBackColor = true;
-            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -116,10 +94,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(456, 310);
-            this.Controls.Add(this.Btn_GetStats);
             this.Controls.Add(this.Btn_Credits);
             this.Controls.Add(this.Btn_HighScores);
-            this.Controls.Add(this.Btn_Options);
             this.Controls.Add(this.Btn_LoadGame);
             this.Controls.Add(this.Btn_CreateCharacter);
             this.Controls.Add(this.Lbl_GameTitle);
@@ -137,10 +113,8 @@
         private System.Windows.Forms.Label Lbl_GameTitle;
         private System.Windows.Forms.Button Btn_CreateCharacter;
         private System.Windows.Forms.Button Btn_LoadGame;
-        private System.Windows.Forms.Button Btn_Options;
         private System.Windows.Forms.Button Btn_HighScores;
         private System.Windows.Forms.Button Btn_Credits;
-        private System.Windows.Forms.Button Btn_GetStats;
     }
 }
 
