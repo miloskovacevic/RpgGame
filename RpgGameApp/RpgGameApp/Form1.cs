@@ -19,8 +19,10 @@ namespace RpgGameApp
 
         private void Btn_CreateCharacter_Click(object sender, EventArgs e)
         {
+            
             FormCharacterCreator charCreator = new FormCharacterCreator();
             charCreator.Show();
+            this.Hide();
         }
     }
 }

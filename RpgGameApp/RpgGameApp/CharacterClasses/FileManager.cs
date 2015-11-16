@@ -70,5 +70,14 @@ namespace RpgGameApp.CharacterClasses
             }
         }
 
+        public static void StoreCharacter(Player player)
+        {
+            using (Stream stream = File.Create(PlayerSettingsFile))
+            {
+                XmlSerializer ser = new XmlSerializer(player.GetType());
+                ser.Serialize(stream, player);
+            }
+        }
+
     }
 }

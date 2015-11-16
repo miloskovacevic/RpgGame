@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CharacterClasses\Entity.cs" />
+    <Compile Include="CharacterClasses\FileManager.cs" />
     <Compile Include="CharacterClasses\Lumberjack.cs" />
     <Compile Include="CharacterClasses\Mage.cs" />
     <Compile Include="CharacterClasses\NPC.cs" />

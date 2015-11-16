@@ -87,7 +87,8 @@ namespace RpgGameApp
             //MessageBox.Show(output, "Success!");
 
             //store our player...
-            StoreCharacter(player1);
+            FileManager.StoreCharacter(player1);
+            //StoreCharacter(player1);
 
             CharacterID stats = new CharacterID();
             stats.Show();
